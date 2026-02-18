@@ -6,6 +6,7 @@ init_daemon_domain(keyprovd)
 hwbinder_use(keyprovd)
 
 unix_socket_connect(keyprovd, tad, tad)
+unix_socket_connect(keyprovd, property, init)
 
 binder_call(keyprovd, vendor_hal_soter_qti)
 
@@ -17,3 +18,4 @@ allow keyprovd tee_device:chr_file rw_file_perms;
 
 get_prop(keyprovd, vendor_tee_listener_prop)
 get_prop(keyprovd, hwservicemanager_prop)
+set_prop(keyprovd, vendor_sdm_prop)

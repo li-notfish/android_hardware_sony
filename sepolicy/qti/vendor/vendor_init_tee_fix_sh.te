@@ -1,0 +1,27 @@
+type vendor_init_tee_fix_sh, domain;
+type vendor_init_tee_fix_sh_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_init_tee_fix_sh)
+
+allow vendor_init_tee_fix_sh vendor_toolbox_exec:file { execute execute_no_trans getattr map open read };
+allow vendor_init_tee_fix_sh vendor_shell_exec:file { execute execute_no_trans getattr map read };
+allow vendor_init_tee_fix_sh vendor_file:file { execute execute_no_trans getattr map read };
+
+allow vendor_init_tee_fix_sh vendor_init_tee_fix_sh:qipcrtr_socket { create bind connect getattr setattr read write };
+
+allow vendor_init_tee_fix_sh tee_device:chr_file rw_file_perms;
+allow vendor_init_tee_fix_sh ion_device:chr_file r_file_perms;
+allow vendor_init_tee_fix_sh vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
+allow vendor_init_tee_fix_sh vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
+allow vendor_init_tee_fix_sh vendor_init_tee_fix_sh:qipcrtr_socket setopt;
+
+allow vendor_init_tee_fix_sh vendor_hal_secd_hwservice:hwservice_manager find;
+allow vendor_init_tee_fix_sh vendor_hal_soter_hwservice:hwservice_manager find;
+
+allow vendor_init_tee_fix_sh logd:unix_stream_socket connectto;
+allow vendor_init_tee_fix_sh logd_socket:sock_file write;
+
+set_prop(vendor_init_tee_fix_sh, vendor_tee_fix_prop)
+get_prop(vendor_init_tee_fix_sh,vendor_tee_fix_prop)
+
+get_prop(vendor_init_tee_fix_sh,vendor_tee_listener_prop)
+set_prop(vendor_init_tee_fix_sh,vendor_tee_listener_prop)
