@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="display_setting_summary">Anpassen verschiedener Anzeigeeinstellungen</string>
-    <string name="cm_dialog_message">Das Aktivieren des Creator-Modus überschreibt den Weißabgleich und die Farbeinstellungen!</string>
-    <string name="cm_checkbox_show_once">Diese Meldung nicht mehr anzeigen</string>
-</resources>
