@@ -67,6 +67,8 @@
 # Sony camera devices
 /dev/camera_sync         u:object_r:hal_camera_sync:s0
 /dev/sony_camera[0-9]    u:object_r:sony_camera_device:s0
+/vendor/lib(64)?/libipebpsstriping\.so		            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libipebpsstriping170\.so	                 u:object_r:same_process_hal_file:s0
 
 # Shell scripts
 /(odm|vendor/odm)/bin/init\.qcom\.msim\.sh    u:object_r:init-qcom-msim-sh_exec:s0
@@ -100,5 +102,3 @@
 
 # discard_max_bytes_File
 /sys/block/.*/queue/discard_max_bytes u:object_r:sysfs_discard_config:s0
-
-/vendor/bin/init\.fix_tee u:object_r:vendor_init_tee_fix_sh_exec:s0

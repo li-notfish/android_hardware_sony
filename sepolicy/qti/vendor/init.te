@@ -15,7 +15,6 @@ allow init vendor_hal_disp_default_exec:file { read getattr map execute open };
 allow init vendor_hal_secd_default_exec:file { read getattr map execute open };
 allow init vendor_hal_secd_default:process { transition siginh rlimitinh };
 allow init vendor_hal_idd_default_exec:file { read getattr map execute open };
-allow init vendor_init_tee_fix_sh_exec:file { read getattr map execute open };
 
 allow init idd_exec:file { read getattr map execute open };
 
