@@ -1,2 +1,10 @@
 allow priv_app hal_miscta_service:service_manager find;
+allow priv_app hal_swiqi_service:service_manager find;
+allow priv_app vendor_hal_idd_hwservice:hwservice_manager find;
+
+allow priv_app proc_filesystems:file { read open getattr };
+allow gmscore_app proc_filesystems:file { read open getattr };
+
 binder_call(priv_app, vendor_hal_miscta_default)
+binder_call(priv_app, vendor_hal_idd_default);
+binder_call(priv_app, vendor_vppservice);

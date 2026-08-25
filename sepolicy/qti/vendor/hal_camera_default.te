@@ -29,3 +29,6 @@ set_prop(hal_camera_default, somc_camera_prop)
 set_prop(hal_camera_default, vendor_camera_running_status_prop)
 set_prop(hal_camera_default, vendor_camera_sensor_prop)
 set_prop(hal_camera_default, vendor_sensors_prop)
+
+
+dontaudit hal_camera_default zygote_config_prop:file { getattr open read };

@@ -107,3 +107,5 @@ allow hal_power_default sysfs_thermal:file rw_file_perms;
 allow hal_power_default sysfs_thermal:lnk_file r_file_perms;
 
 allow hal_power_default self:capability sys_nice;
+
+dontaudit hal_power_default vendor_hal_vnddisplayconfig_service:service_manager find;
