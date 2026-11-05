@@ -2,9 +2,6 @@ sony.screen_brightness    u:object_r:display_brightness_prop:s0
 audio.sys.noisy.broadcast.delay  u:object_r:audio_config_prop:s0 exact int
 audio.sys.offload.pstimeout.secs u:object_r:audio_config_prop:s0 exact int
 
-# 360RA effect flag (read by audioserver / Sony360RAudioPolicy and the tsr effects)
-vendor.360ra.effect              u:object_r:audio_prop:s0 exact bool
-
 # Bluetooth A2DP AAC offload (init.sony.rc)
 persist.bluetooth.a2dp_aac.vbr_supported u:object_r:bluetooth_a2dp_offload_prop:s0 exact bool
 persist.vendor.bt.a2dp_offload_cap u:object_r:vendor_bluetooth_prop:s0 exact string
